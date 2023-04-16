@@ -1,5 +1,5 @@
 # fef
-Repositório para guardar os códigos que forem proposto durante o curso de Graduação em Sistemas de Informaçaõ na Faculdade Educacional de Fernandópolis.
+Repositório para guardar os códigos que forem propostos durante o curso de Graduação em Sistemas de Informação na Faculdade Educacional de Fernandópolis.
 
 GRADE PRIMEIRO SEMESTRE
 
