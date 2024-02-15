@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        function converter(){
+            var valorReal = parseFloat(document.getElementById("idValorReal").value);
+            var valorDolar = parseFloat(document.getElementById("idValorDolar").value);
+
+            var conversao = valorReal/valorDolar;
+            
+            conversao = conversao.toFixed(2);
+
+            
+            alert("Valor da Conversão Real em Dolar => "+ conversao);
+            
+        }
+    
+    </script>
+
+</head>
+<body>
+    <p>Usando Javascript getElementById</p>
+    <form name="formTesteJs" method="GET">
+        <label>Digite o valor em Reais</label>
+        <input id="idValorReal" type="text" placeholder="Real"/>
+        <input id="idValorDolar" type="text" placeholder="Dolar"/>
+        
+        <input id="botao" type="button" value="Clique Aqui!"
+        onclick="converter()"/>
+
+    </form>
+    
+</body>
+</html>

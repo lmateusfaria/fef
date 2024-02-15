@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tabela com jQuery</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+</head>
+<body>
+    <h1>Tabela com jQuery</h1>
+    <input type="text" id="search" placeholder="Buscar">
+    <table id="tabela" class="display">
+        <thead>
+            <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+                <th>Coluna 3</th>
+                <th>Coluna 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os 10 itens devem ser gerados aqui -->
+        </tbody>
+    </table>
+    
+    <div id="pagination"></div>
+
+    <script>
+        $(document).ready(function () {
+            // Dados fictícios para a tabela (você pode substituir isso com seus próprios dados)
+            var dados = [
+                ["Item 1", "Descrição 1", "Valor 1", "Categoria 1"],
+                ["Item 2", "Descrição 2", "Valor 2", "Categoria 2"],
+                // ... Adicione mais linhas de dados aqui ...
+            ];
+
+            // Criação da tabela
+            var tabela = $('#tabela').DataTable({
+                data: dados,
+                columns: [
+                    { title: "Coluna 1" },
+                    { title: "Coluna 2" },
+                    { title: "Coluna 3" },
+                    { title: "Coluna 4" }
+                ]
+            });
+
+            // Aplicação de busca
+            $('#search').on('keyup', function () {
+                tabela.search(this.value).draw();
+            });
+
+            // Ativação da paginação
+            tabela.on('draw', function () {
+                var pageInfo = tabela.page.info();
+                $('#pagination').html('Página ' + (pageInfo.page + 1) + ' de ' + pageInfo.pages);
+            });
+        });
+    </script>
+</body>
+</html>

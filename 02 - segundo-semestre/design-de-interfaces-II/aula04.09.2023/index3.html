@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius e Fahrenheit</title>
+</head>
+<body>
+    <input id="grausCelcius" placeholder="Digite um número" onkeyup="conversao()">
+    <div id="resultado"></div>
+
+    <script>
+        function conversao(){
+            var grausCelcius = document.querySelector("#grausCelcius");
+            var resultado = document.querySelector("#resultado");
+            resultado.innerText = "";
+            var gc = grausCelcius.value;
+
+            for (var i = 0 ; i <= 100 ; i++){
+                var div = document.createElement("div");
+                div.innerText = ((gc*1.8)+32);
+                resultado.appendChild(div);
+                gc++;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

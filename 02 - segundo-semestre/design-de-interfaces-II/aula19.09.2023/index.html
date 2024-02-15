@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+    
+
+</head>
+<body>
+    <table id="tabelaClientes" class="display" style="width: 100px;" >
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+                <th>Idade</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div id="marcaPagina"></div>
+
+    <script>
+        $(document).ready(function () {
+            // Dados dos Clientes
+            var dados = [
+                ["Antonio", "Eletricista", "2500", "65"],
+                ["Lucas", "Pedreiro", "3000", "60"],
+                ["José", "Mecanico", "2800", "48"],
+                ["João", "Cantor", "5000", "30"],
+                ["Leandro", "Açogueiro", "3500", "26"],
+                ["Diego", "Analista ", "2200", "35"],
+                ["Laurindo", "Gestor", "5000", "43"],
+                ["Josimar", "Supervisor", "1800", "19"],
+                ["Célio", "Faxineiro", "2400", "43"],
+                ["Augusto", "Motorista", "2900", "34"],
+                ["Augusto", "Motorista", "2900", "34"],
+                
+            ];
+
+            // Criação da tabela
+            var tabelaClientes = $('#tabelaClientes').DataTable({
+                data: dados,
+                columns: [
+                    { title: "Nome" },
+                    { title: "Cargo" },
+                    { title: "Salário" },
+                    { title: "Idade" }
+                ],
+                info: false,
+                
+            });
+            
+            // Procurar
+            $('#busca').on('keyup', function () {
+                tabelaClientes.search(this.value).draw();
+            });
+
+            // Paginas da tabela
+            tabelaClientes.on('draw', function () {
+                var pageInfo = tabelaClientes.page.info();
+                $('#marcaPagina').html('Página ' + (pageInfo.page + 1) + ' de ' + pageInfo.pages);
+            });
+            
+        });
+    </script>
+</body>
+</html>

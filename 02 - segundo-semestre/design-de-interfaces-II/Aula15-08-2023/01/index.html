@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt-br">
+    <head>
+        <title>Soma Dois Numeros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            
+            function calcularSoma(){
+                var v1 = parseFloat((document.formSoma.valor1.value));
+                var v2 = parseFloat((document.formSoma.valor2.value));
+                window.alert(v1+v2);
+            }
+            
+            function calcularArea(){
+                var base = parseFloat((document.formArea.base.value));
+                var altura = parseFloat((document.formArea.altura.value));
+                var area = (base*altura)/2;
+                
+                window.alert('Area => '+ area);
+            }
+
+            function calcularPolegada(){
+                var polegada = parseFloat((document.formPolegadas.polegada.value));
+                
+                var mm = polegada*25.4;
+                
+                window.alert(polegada+' Polegada(s) = '+ mm+ ' mm ');
+            }
+
+            function calcularSalario(){
+                var nome = (document.formSalario.nomeFuncionario.value);
+                var horasTrabalhadas = parseFloat((document.formSalario.horasTrabalhadas.value));
+                var valorHora = parseFloat((document.formSalario.valorHora.value));
+                var valorDescontos = parseFloat((document.formSalario.valorDescontos.value));
+                var salarioBruto = valorHora*horasTrabalhadas;
+                var salarioLiquido = salarioBruto-valorDescontos;
+                
+                window.alert(nome+' -> Salario Bruto => '+ salarioBruto + ' | Salario Liquido => '+ salarioLiquido);
+            }
+
+
+            function mediaAluno(){
+                var aluno = document.frmMedia.aluno.value;
+                var notaTrab = parseFloat(document.frmMedia.notaTrab.value);
+                var notaAv1 = parseFloat(document.frmMedia.notaAv1.value);
+                var media = (notaTrab*0.4)+(notaAv1*0.6);
+
+                if (media <=3 )
+                    window.alert('O aluno(a) '+aluno+' teve média = '+media+' e está reprovado!' );
+                else if (media < 5)
+                    window.alert('O aluno(a) '+aluno+' teve média = '+media+' e está de sub!' );
+                else
+                    window.alert('O aluno(a) '+aluno+' teve média = '+media+' e está de sub!' );
+                
+
+            }
+            
+            
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <fieldset>
+            <legend>Soma de Dois Valores</legend>
+        
+            <form name="formSoma">
+                <label>Primeiro Valor</label>
+                <input id="valor1" placeholder="Valor 1" type="text"/>
+                <br><br>
+                <label>Segundo Valor</label>
+                <input id="valor2" placeholder="Valor 2"  type="text"/>
+                
+                <input type="button" value="Calcular Soma" onclick="calcularSoma()"/>
+                
+            </form>
+        </fieldset>
+        
+        <br>
+        
+        
+        <fieldset>
+            <legend>Calculo de Area</legend>
+            
+            <form name="formArea">
+                <label>Valor da Base</label>
+                <input id="base" placeholder="Base" type="text"/>
+                <br><br>
+                <label>Valor da Altura</label>
+                <input id="altura" placeholder="Altura"/>
+
+                <input type="button" value="Calcular Area" onclick="calcularArea()"/>
+
+            </form>
+        
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Calculo de polegadas em mm</legend>
+            
+            <form name="formPolegadas">
+                <label>Valor em Polegas</label>
+                <input id="polegada" placeholder="Polegada(s)" type="text"/>
+                
+                <input type="button" value="Calcular Area" onclick="calcularPolegada()"/>
+                
+            </form>
+        
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Calculo de Salario</legend>
+            
+            <form name="formSalario">
+                <label>Nome do Funcionario</label>
+                <input id="nomeFuncionario" placeholder="Nome" type="text"/>
+                
+                <label>Horas Trabalhadas</label>
+                <input id="horasTrabalhadas" placeholder="Horas Trabalhadas" type="text"/>
+                
+                <label>Valor por Hora</label>
+                <input id="valorHora" placeholder="Valor por Hora R$" type="text"/>
+                
+                <label>Valor de Descontos</label>
+                <input id="valorDescontos" placeholder="Descontos em R$" type="text"/>
+                
+                <input type="button" value="Calcular Salario" onclick="calcularSalario()"/>
+                
+            </form>
+        
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Calculo de Media do Aluno</legend>
+            
+            <form name="frmMedia">
+                <label>Nome do Aluno</label>
+                <input id="aluno" placeholder="Nome do Aluno" type="text"/>
+                
+                <label>Nota do Trabalho</label>
+                <input id="notaTrab" placeholder="Nota do Trabalho"/>
+                <label>Nota da Av 1</label>
+                <input id="notaAv1" placeholder="Nota da Av 1"/>
+                
+                <input type="button" value="Calcular Média" onclick="mediaAluno()"/>
+
+            </form>
+        
+        </fieldset>
+        
+        
+        
+        
+    </body>
+</html>

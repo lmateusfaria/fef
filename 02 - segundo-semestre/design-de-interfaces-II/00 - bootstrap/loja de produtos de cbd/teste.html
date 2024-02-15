@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="view-source:https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#telefone").inputmask({
+        mask: ["(99) 9999-9999", "(99) 99999-9999", ],
+        keepStatic: true
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <input type="text" id="telefone" name="telefone" />
+</body>
+
+</html>
