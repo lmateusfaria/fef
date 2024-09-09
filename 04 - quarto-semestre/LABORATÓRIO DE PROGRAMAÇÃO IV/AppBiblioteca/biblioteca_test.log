@@ -1,0 +1,125 @@
+2024-09-08T21:57:41.243-03:00  INFO 255040 --- [App] [restartedMain] com.biblioteca.App.AppApplication        : Starting AppApplication using Java 17.0.6 with PID 255040 (C:\Users\LM\Desktop\FEF\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\AppBiblioteca\target\classes started by LM in C:\Users\LM\Desktop\FEF\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\AppBiblioteca)
+2024-09-08T21:57:41.248-03:00  INFO 255040 --- [App] [restartedMain] com.biblioteca.App.AppApplication        : The following 1 profile is active: "test"
+2024-09-08T21:57:41.554-03:00  INFO 255040 --- [App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-08T21:57:41.558-03:00  INFO 255040 --- [App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-08T21:57:45.467-03:00  INFO 255040 --- [App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-08T21:57:45.546-03:00  INFO 255040 --- [App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2024-09-08T21:57:48.388-03:00  INFO 255040 --- [App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-08T21:57:48.423-03:00  INFO 255040 --- [App] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-08T21:57:48.423-03:00  INFO 255040 --- [App] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-08T21:57:48.607-03:00  INFO 255040 --- [App] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-08T21:57:48.608-03:00  INFO 255040 --- [App] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7048 ms
+2024-09-08T21:57:49.113-03:00  INFO 255040 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-08T21:57:50.173-03:00  INFO 255040 --- [App] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bibliotecadb user=SA
+2024-09-08T21:57:50.177-03:00  INFO 255040 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-08T21:57:50.227-03:00  INFO 255040 --- [App] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bibliotecadb'
+2024-09-08T21:57:51.251-03:00  INFO 255040 --- [App] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-08T21:57:51.399-03:00  INFO 255040 --- [App] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-08T21:57:51.488-03:00  INFO 255040 --- [App] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-08T21:57:52.660-03:00  INFO 255040 --- [App] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-08T21:58:01.261-03:00  INFO 255040 --- [App] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-08T21:58:01.451-03:00  INFO 255040 --- [App] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T21:58:01.640-03:00  WARN 255040 --- [App] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testConfig': Unsatisfied dependency expressed through field 'dbService': Error creating bean with name 'DBService': Unsatisfied dependency expressed through field 'autorRepo': No qualifying bean of type 'com.biblioteca.repositories.AutorRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-08T21:58:01.641-03:00  INFO 255040 --- [App] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T21:58:01.799-03:00  WARN 255040 --- [App] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-09-08T21:58:01.803-03:00  INFO 255040 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-08T21:58:01.811-03:00  INFO 255040 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-08T21:58:01.817-03:00  INFO 255040 --- [App] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-08T21:58:01.970-03:00  INFO 255040 --- [App] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-08T21:58:02.057-03:00 ERROR 255040 --- [App] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field autorRepo in com.biblioteca.service.DBService required a bean of type 'com.biblioteca.repositories.AutorRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.biblioteca.repositories.AutorRepository' in your configuration.
+
+2024-09-08T21:59:56.087-03:00  INFO 255612 --- [App] [restartedMain] com.biblioteca.App.AppApplication        : Starting AppApplication using Java 17.0.6 with PID 255612 (C:\Users\LM\Desktop\FEF\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\AppBiblioteca\target\classes started by LM in C:\Users\LM\Desktop\FEF\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\AppBiblioteca)
+2024-09-08T21:59:56.093-03:00  INFO 255612 --- [App] [restartedMain] com.biblioteca.App.AppApplication        : The following 1 profile is active: "test"
+2024-09-08T21:59:56.816-03:00  INFO 255612 --- [App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-08T21:59:56.817-03:00  INFO 255612 --- [App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-08T22:00:02.295-03:00  INFO 255612 --- [App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-08T22:00:02.424-03:00  INFO 255612 --- [App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 0 JPA repository interfaces.
+2024-09-08T22:00:05.729-03:00  INFO 255612 --- [App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-08T22:00:05.766-03:00  INFO 255612 --- [App] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-08T22:00:05.767-03:00  INFO 255612 --- [App] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-08T22:00:06.034-03:00  INFO 255612 --- [App] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-08T22:00:06.037-03:00  INFO 255612 --- [App] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9216 ms
+2024-09-08T22:00:06.133-03:00  INFO 255612 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-08T22:00:06.873-03:00  INFO 255612 --- [App] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bibliotecadb user=SA
+2024-09-08T22:00:06.878-03:00  INFO 255612 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-08T22:00:06.907-03:00  INFO 255612 --- [App] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bibliotecadb'
+2024-09-08T22:00:07.958-03:00  INFO 255612 --- [App] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-08T22:00:08.104-03:00  INFO 255612 --- [App] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-08T22:00:08.228-03:00  INFO 255612 --- [App] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-08T22:00:09.869-03:00  INFO 255612 --- [App] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-08T22:00:14.127-03:00  INFO 255612 --- [App] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-08T22:00:14.295-03:00  INFO 255612 --- [App] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T22:00:14.693-03:00  WARN 255612 --- [App] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testConfig': Unsatisfied dependency expressed through field 'dbService': Error creating bean with name 'DBService': Unsatisfied dependency expressed through field 'autorRepo': No qualifying bean of type 'com.biblioteca.repositories.AutorRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-09-08T22:00:14.694-03:00  INFO 255612 --- [App] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T22:00:14.716-03:00  WARN 255612 --- [App] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-09-08T22:00:14.717-03:00  INFO 255612 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-08T22:00:14.721-03:00  INFO 255612 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-08T22:00:14.725-03:00  INFO 255612 --- [App] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-08T22:00:14.757-03:00  INFO 255612 --- [App] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-08T22:00:14.829-03:00 ERROR 255612 --- [App] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field autorRepo in com.biblioteca.service.DBService required a bean of type 'com.biblioteca.repositories.AutorRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.biblioteca.repositories.AutorRepository' in your configuration.
+
+2024-09-08T22:04:38.028-03:00  INFO 256612 --- [App] [restartedMain] com.biblioteca.App.AppApplication        : Starting AppApplication using Java 17.0.6 with PID 256612 (C:\Users\LM\Desktop\FEF\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\AppBiblioteca\target\classes started by LM in C:\Users\LM\Desktop\FEF\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\AppBiblioteca)
+2024-09-08T22:04:38.034-03:00  INFO 256612 --- [App] [restartedMain] com.biblioteca.App.AppApplication        : The following 1 profile is active: "test"
+2024-09-08T22:04:38.685-03:00  INFO 256612 --- [App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-08T22:04:38.686-03:00  INFO 256612 --- [App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-08T22:04:41.996-03:00  INFO 256612 --- [App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-08T22:04:42.163-03:00  INFO 256612 --- [App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 3 JPA repository interfaces.
+2024-09-08T22:04:46.326-03:00  INFO 256612 --- [App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-08T22:04:46.391-03:00  INFO 256612 --- [App] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-08T22:04:46.392-03:00  INFO 256612 --- [App] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-08T22:04:46.914-03:00  INFO 256612 --- [App] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-08T22:04:46.915-03:00  INFO 256612 --- [App] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8227 ms
+2024-09-08T22:04:47.007-03:00  INFO 256612 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-08T22:04:47.936-03:00  INFO 256612 --- [App] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bibliotecadb user=SA
+2024-09-08T22:04:47.940-03:00  INFO 256612 --- [App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-08T22:04:47.975-03:00  INFO 256612 --- [App] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bibliotecadb'
+2024-09-08T22:04:48.878-03:00  INFO 256612 --- [App] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-08T22:04:49.049-03:00  INFO 256612 --- [App] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-08T22:04:49.167-03:00  INFO 256612 --- [App] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-08T22:04:50.638-03:00  INFO 256612 --- [App] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-08T22:04:54.305-03:00  INFO 256612 --- [App] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-08T22:04:54.649-03:00  INFO 256612 --- [App] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T22:04:57.086-03:00  WARN 256612 --- [App] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-08T22:04:58.883-03:00  INFO 256612 --- [App] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-08T22:04:59.005-03:00  INFO 256612 --- [App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-08T22:04:59.041-03:00  INFO 256612 --- [App] [restartedMain] com.biblioteca.App.AppApplication        : Started AppApplication in 22.837 seconds (process running for 24.816)
+2024-09-08T22:07:12.435-03:00  INFO 256612 --- [App] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T22:07:12.561-03:00  WARN 256612 --- [App] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-09-08T22:07:12.562-03:00  INFO 256612 --- [App] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-08T22:07:12.575-03:00  INFO 256612 --- [App] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
