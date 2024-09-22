@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22.08.2023</title>
+    <!--
+1. Escreva um programa que pede o raio de um c�rculo, e em seguida exiba o per�metro e �rea do c�rculo.
+    -->
+    <script text="text/javascript">
+        
+        //1. Escreva um programa que pede o raio de um c�rculo, e em seguida exiba o per�metro e �rea do c�rculo.
+        function calcularPerimetroArea(){
+            const PI = 3.14;
+            var raio = parseFloat(document.formCalculoPerimetroArea.raio.value);
+            var perimetro = (2*PI)*raio;
+            var area = (PI*(raio**2));
+                
+            window.alert('O raio Inserido foi = '+raio+' | Perimetro = '+perimetro+' | �rea = '+area);    
+        }
+        
+            //2. Fazer um programa que leia o valor do sal�rio
+            //m�nimo e o valor do sal�rio de uma pessoa.
+            //Calcular e imprimir quantos sal�rios m�nimos ela ganha.    
+        
+        function calcularSalariosMin(){
+            var salarioMinimo = parseFloat(document.formCalcularSalariosMin.salarioMinimo.value);
+            var salarioPessoa = parseFloat(document.formCalcularSalariosMin.salarioPessoa.value);
+            
+            var calculoSalarios = salarioPessoa/salarioMinimo; 
+            
+            window.alert('O Salario da Pessoa � igual a '+calculoSalarios+' Salarios Minimos ');    
+        }
+            //3.Crie um software que recebe o valor do seu sal�rio
+            //e calcula os 7% do imposto de renda.A sa�da do seu
+            //programa deve ser o sal�rio bruto (sem abatimento),
+            //o tanto de imposto que vai pagar e o seu sal�rio
+            //l�quido (ap�s descontar o IR).
+
+            function calcularSalario(){
+            var salario = parseFloat(document.formCalcularSalario.salario.value);
+            
+            var ir = salario*0.07;
+            var salarioLiquido = salario-ir;
+
+            window.alert('O Salario Bruto � igual a R$ '+salario+' | IR = R$ '+ir+' | Salario Liquido = R$ '+salarioLiquido);    
+        }
+
+        //4. Fa�a um Programa que leia tr�s n�meros e mostre o maior deles.
+        function verificarMaior(){
+            var n1 = parseFloat(document.formVerificarMaior.n1.value);
+            var n2 = parseFloat(document.formVerificarMaior.n2.value);
+            var n3 = parseFloat(document.formVerificarMaior.n3.value);
+            
+            if( (n1 > n2 && n2 >= n3) || (n1 >= n3 && n3 > n2)){
+                window.alert(n1);    
+            }else if((n2 >= n1 && n1 > n3) || (n2 > n3 && n3 >= n1)){
+                window.alert(n2);
+            }else{
+                window.alert(n3);
+            }
+        }
+
+
+        //5. Fa�a um Programa que pe�a os 3 lados de um tri�ngulo. O programa dever� informar
+        //se os valores podem ser um tri�ngulo. Indique, caso os lados formem um tri�ngulo,
+        //se o mesmo �: equil�tero, is�sceles ou escaleno.
+        //Dicas: Tr�s lados formam um tri�ngulo quando a soma de quaisquer dois lados for maior que o terceiro;
+        // Tri�ngulo Equil�tero: tr�s lados iguais;
+        // Tri�ngulo Is�sceles: quaisquer dois lados iguais;
+        // Tri�ngulo Escaleno: tr�s lados diferentes;
+        function verificarTriangulo(){
+            var lado1 = parseFloat(document.formVerificarTriangulo.lado1.value);
+            var lado2 = parseFloat(document.formVerificarTriangulo.lado2.value);
+            var lado3 = parseFloat(document.formVerificarTriangulo.lado3.value);
+            
+            //Todos os lados diferentes
+            var escaleno = (lado1 != lado2 && lado2 != lado3 && lado1 != lado3);
+            // Dois lados Iguais
+            var equilatero = (lado1 == lado2 && lado2 == lado3);
+            // Todos iguais
+
+
+            if((lado1 > lado2+lado3) || (lado2 > lado1+3) || (lado3 > lado1+lado2)){
+                window.alert("Triangulo N�o Possivel!" );    
+            }else if(escaleno){
+                window.alert("Triangulo Escaleno, todos os lados s�o diferentes" );    
+            }else if(equilatero){
+                window.alert("Triangulo Equilatero, todos os lados s�o iguais" );
+            }else{
+                window.alert("Triangulo Isoceles, dois dos lados iguais" );
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+    1. Escreva um programa que pede o raio de um c�rculo, e em seguida exiba o per�metro e �rea do c�rculo.
+        
+    <fieldset>
+        <legend>Calcular Perimetro e Area</legend>
+        <!--
+            1. Escreva um programa que pede o raio de um c�rculo, e em seguida exiba o per�metro e �rea do c�rculo.
+        -->
+        <form name="formCalculoPerimetroArea">
+            <label>Insira o raio do c�rculo</label>
+            <input id="raio" placeholder="Valor do Raio" type="text"/>
+            
+            <input type="button" value="Calcular" onclick="calcularPerimetroArea()"/>
+            
+        </form>
+    </fieldset>
+    <br>
+    2. Fazer um programa que leia o valor do sal�rio m�nimo e o valor do sal�rio de uma pessoa.
+        Calcular e imprimir quantos sal�rios m�nimos ela ganha.
+    <fieldset>
+        <legend>Calcular Perimetro e Area</legend>
+        <!--
+            2. Fazer um programa que leia o valor do sal�rio
+            m�nimo e o valor do sal�rio de uma pessoa.
+            Calcular e imprimir quantos sal�rios m�nimos
+            ela ganha.    
+        -->
+        <form name="formCalcularSalariosMin">
+            <label>Insira o valor do Salario Minimo</label>
+            <input id="salarioMinimo" placeholder="Salario Minimo" type="text"/>
+            
+            <label>Insira o valor do Salario da Pessoa</label>
+            <input id="salarioPessoa" placeholder="Salario da Pessoa" type="text"/>
+            
+
+            <input type="button" value="Calcular" onclick="calcularSalariosMin()"/>
+            
+        </form>
+    </fieldset>
+    <br>
+    3.Crie um software que recebe o valor do seu sal�rio e calcula os 7% do imposto de renda.A sa�da do seu
+    programa deve ser o sal�rio bruto (sem abatimento), o tanto de imposto que vai pagar e o seu sal�rio l�quido (ap�s descontar o IR).
+    <fieldset>
+        <legend>Calcular Salario</legend>
+        <!--
+            //3.Crie um software que recebe o valor do seu sal�rio
+            //e calcula os 7% do imposto de renda.A sa�da do seu
+            //programa deve ser o sal�rio bruto (sem abatimento),
+            //o tanto de imposto que vai pagar e o seu sal�rio
+            //l�quido (ap�s descontar o IR).    
+        -->
+        <form name="formCalcularSalario">
+            
+            <label>Insira o valor do Salario</label>
+            <input id="salario" placeholder="Salario da Pessoa" type="text"/>
+            
+
+            <input type="button" value="Calcular Salario" onclick="calcularSalario()"/>
+            
+        </form>
+    </fieldset>
+    <br>
+    4. Fa�a um Programa que leia tr�s n�meros e mostre o maior deles.
+    <fieldset>
+        <legend>Calcular Salario</legend>
+        <!--
+            //4. Fa�a um Programa que leia tr�s n�meros e mostre o maior deles.    
+        -->
+        <form name="formVerificarMaior">
+            
+            <label>Insira o primeiro n�mero</label>
+            <input id="n1" placeholder="Primeiro Numero" type="text"/>
+            
+            
+            <label>Insira o segundo n�mero</label>
+            <input id="n2" placeholder="Segundo Numero" type="text"/>
+            
+            
+            <label>Insira o terceiro n�mero</label>
+            <input id="n3" placeholder="Terceiro Numero" type="text"/>
+            
+            
+            <input type="button" value="Mostrar Maior" onclick="verificarMaior()"/>
+            
+        </form>
+    </fieldset>
+    <br>
+    5. Fa�a um Programa que pe�a os 3 lados de um tri�ngulo. O programa dever� informar
+        se os valores podem ser um tri�ngulo. Indique, caso os lados formem um tri�ngulo,
+        se o mesmo �: equil�tero, is�sceles ou escaleno.
+        Dicas: Tr�s lados formam um tri�ngulo quando a soma de quaisquer dois lados for maior que o terceiro;
+        <br>* Tri�ngulo Equil�tero: tr�s lados iguais;
+        <br>* Tri�ngulo Is�sceles: quaisquer dois lados iguais;
+        <br>* Tri�ngulo Escaleno: tr�s lados diferentes; 
+    <fieldset>
+        <legend>Verificar Triangulo</legend>
+        <!--
+        5. Fa�a um Programa que pe�a os 3 lados de um tri�ngulo. O programa dever� informar
+        se os valores podem ser um tri�ngulo. Indique, caso os lados formem um tri�ngulo,
+        se o mesmo �: equil�tero, is�sceles ou escaleno.
+        Dicas: Tr�s lados formam um tri�ngulo quando a soma de quaisquer dois lados for maior que o terceiro;
+        * Tri�ngulo Equil�tero: tr�s lados iguais;
+        * Tri�ngulo Is�sceles: quaisquer dois lados iguais;
+        * Tri�ngulo Escaleno: tr�s lados diferentes;    
+        -->
+        <form name="formVerificarTriangulo">
+            
+            <label>Insira o primeiro lado</label>
+            <input id="lado1" placeholder="Primeiro Lado" type="text"/>
+            <br><br>
+            
+            <label>Insira o segundo lado</label>
+            <input id="lado2" placeholder="Segundo Lado" type="text"/>
+            <br><br>
+            
+            <label>Insira o terceiro lado</label>
+            <input id="lado3" placeholder="Terceiro Lado" type="text"/>
+            <br><br>
+            
+            <input type="button" value="Verificar" onclick="verificarTriangulo()"/>
+            
+        </form>
+    </fieldset>
+
+</body>
+</html>

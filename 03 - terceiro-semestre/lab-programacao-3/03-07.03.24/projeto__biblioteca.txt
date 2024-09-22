@@ -1,0 +1,173 @@
+// classe principal
+
+package testebiblioteca;//mudar 
+
+import java.util.Scanner;
+
+public class TesteBiblioteca {//mudar
+
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Biblioteca biblioteca = new Biblioteca();
+
+        while (true) {
+            System.out.println("\nSelecione uma opção:");
+            System.out.println("1. Adicionar livro ao acervo");
+            System.out.println("2. Emprestar livro");
+            System.out.println("3. Devolver livro");
+            System.out.println("4. Exibir livros disponíveis");
+            System.out.println("5. Sair");
+
+            int opcao = scanner.nextInt();
+            scanner.nextLine(); // Limpar o buffer do scanner
+            switch (opcao) {
+                case 1:
+                    System.out.println("Digite o título do livro:");
+                    String titulo = scanner.nextLine();
+                    System.out.println("Digite o nome do autor:");
+                    String autor = scanner.nextLine();
+                    System.out.println("Digite o número de páginas:");
+                    int numPaginas = scanner.nextInt();
+                    biblioteca.adicionarLivro(new Livro(titulo, autor, numPaginas));
+                    break;
+                case 2:
+                    System.out.println("Digite o título do livro que deseja emprestar:");
+                    String tituloEmprestar = scanner.nextLine();
+                    biblioteca.emprestarLivro(tituloEmprestar);
+                    break;
+                case 3:
+                    System.out.println("Digite o título do livro que deseja devolver:");
+                    String tituloDevolver = scanner.nextLine();
+                    biblioteca.devolverLivro(tituloDevolver);
+                    break;
+                case 4:
+                    biblioteca.exibirLivrosDisponiveis();
+                    break;
+                case 5:
+                    System.out.println("Saindo...");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+                    
+            }
+        }
+    }
+    
+}
+
+
+//------------------------------------------------------------------
+//biblioteca
+
+package testebiblioteca;//colocar nome do pacote correto
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Biblioteca {
+    private List<Livro> acervo;
+
+    public Biblioteca() {
+        acervo = new ArrayList<>();
+    }
+
+    public void adicionarLivro(Livro livro) {
+        acervo.add(livro);
+        System.out.println("Livro adicionado ao acervo.");
+    }
+
+    public void emprestarLivro(String titulo) {
+        for (Livro livro : acervo) {
+            if (livro.getTitulo().equals(titulo)) {
+                livro.emprestar();
+                return;
+            }
+        }
+        System.out.println("Livro não encontrado no acervo.");
+    }
+
+    public void devolverLivro(String titulo) {
+        for (Livro livro : acervo) {
+            if (livro.getTitulo().equals(titulo)) {
+                livro.devolver();
+                return;
+            }
+        }
+        System.out.println("Livro não encontrado no acervo.");
+    }
+
+    public void exibirLivrosDisponiveis() {
+        System.out.println("Livros disponíveis na biblioteca:");
+        for (Livro livro : acervo) {
+            if (!livro.isEmprestado()) {
+                livro.exibirInformacoes();
+                System.out.println();
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------
+//livro
+
+
+package testebiblioteca;// colocar nome do pacote correto
+
+ class Livro {
+    private String titulo;
+    private String autor;
+    private int numPaginas;
+    private boolean emprestado;
+
+    public Livro(String titulo, String autor, int numPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numPaginas = numPaginas;
+        this.emprestado = false;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getNumPaginas() {
+        return numPaginas;
+    }
+
+    public boolean isEmprestado() {
+        return emprestado;
+    }
+
+    public void emprestar() {
+        if (!emprestado) {
+            emprestado = true;
+            System.out.println("Livro emprestado com sucesso!");
+        } else {
+            System.out.println("Este livro já está emprestado.");
+        }
+    }
+
+    public void devolver() {
+        if (emprestado) {
+            emprestado = false;
+            System.out.println("Livro devolvido com sucesso!");
+        } else {
+            System.out.println("Este livro não está emprestado.");
+        }
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Número de páginas: " + numPaginas);
+        System.out.println("Emprestado: " + (emprestado ? "Sim" : "Não"));
+    }
+}
+
+
