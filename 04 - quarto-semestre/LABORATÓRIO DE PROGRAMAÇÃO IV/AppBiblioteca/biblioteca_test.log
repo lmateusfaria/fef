@@ -36,7 +36,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field autorRepo in com.biblioteca.service.DBService required a bean of type 'com.biblioteca.repositories.AutorRepository' that could not be found.
+Field autorRepo in com.biblioteca.services.DBService required a bean of type 'com.biblioteca.repositories.AutorRepository' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -84,7 +84,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field autorRepo in com.biblioteca.service.DBService required a bean of type 'com.biblioteca.repositories.AutorRepository' that could not be found.
+Field autorRepo in com.biblioteca.services.DBService required a bean of type 'com.biblioteca.repositories.AutorRepository' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)

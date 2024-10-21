@@ -1,4 +1,4 @@
-package com.biblioteca.service;
+package com.biblioteca.services;
 
 import com.biblioteca.domains.Autor;
 import com.biblioteca.domains.Editora;

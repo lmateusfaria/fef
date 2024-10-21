@@ -1,10 +1,12 @@
 package com.biblioteca.resources;
 
+import com.biblioteca.domains.Autor;
 import com.biblioteca.domains.dtos.AutorDTO;
-import com.biblioteca.service.AutorService;
+import com.biblioteca.services.AutorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +23,19 @@ public class AutorResource {
     public ResponseEntity<List<AutorDTO>> findAll(){
         return ResponseEntity.ok().body(autorService.findAll());
     }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<AutorDTO> findbyId(@PathVariable Long id){
+        Autor obj = this.autorService.findbyId(id);
+        return ResponseEntity.ok().body(new AutorDTO(obj));
+    }
+
+    @GetMapping(value = "/documentopessoal/{documentoPessoal}")
+    public ResponseEntity<AutorDTO> findbyId(@PathVariable String documentoPessoal){
+        Autor obj = this.autorService.findbyDocumentoPessoal(documentoPessoal);
+        return ResponseEntity.ok().body(new AutorDTO(obj));
+    }
+
+
 
 }
