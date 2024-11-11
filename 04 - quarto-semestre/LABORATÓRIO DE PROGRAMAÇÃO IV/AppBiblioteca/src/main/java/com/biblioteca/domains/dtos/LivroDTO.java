@@ -19,7 +19,7 @@ import java.time.LocalDate;
 
 public class LivroDTO {
 
-    private long id;
+    private Integer id;
 
     @NotNull(message = "O campo nome não pode ser nulo!")
     @NotBlank(message = "O campo nome não pode ser vazio!")
@@ -42,7 +42,7 @@ public class LivroDTO {
     private BigDecimal valorCompra;
 
     @NotNull(message = "O campo autor não pode ser nulo!")
-    private int autor;
+    private Long autor;
     private String nomeAutor;
     private String docPessoalAutor;
 
@@ -75,11 +75,11 @@ public class LivroDTO {
         this.conservacao = livro.getConservacao().getId();
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -126,11 +126,11 @@ public class LivroDTO {
     }
 
     @NotNull(message = "O campo autor não pode ser nulo!")
-    public int getAutor() {
+    public Long getAutor() {
         return autor;
     }
 
-    public void setAutor(@NotNull(message = "O campo autor não pode ser nulo!") int autor) {
+    public void setAutor(@NotNull(message = "O campo autor não pode ser nulo!") Long autor) {
         this.autor = autor;
     }
 

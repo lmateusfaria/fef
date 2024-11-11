@@ -28,4 +28,9 @@ public class GrupoProdutoService {
         return obj.orElse(null);
     }
 
+    public GrupoProduto create(GrupoProdutoDTO dto){
+        dto.setId(null);
+        GrupoProduto obj = new GrupoProduto(dto);
+        return grupoProdutoRepo.save(obj);
+    }
 }

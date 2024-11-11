@@ -1,6 +1,7 @@
 package com.curso.domains;
 
 
+import com.curso.domains.dtos.GrupoProdutoDTO;
 import com.curso.domains.enums.Status;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -18,7 +19,7 @@ public class GrupoProduto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_grupoproduto")
-    private int id;
+    private Integer id;
 
     @NotNull @NotBlank
     private String descricao;
@@ -43,17 +44,23 @@ public class GrupoProduto {
         this.status = Status.ATIVO;
     }
 
-    public GrupoProduto(int id, String descricao, Status status) {
+    public GrupoProduto(Integer id, String descricao, Status status) {
         this.id = id;
         this.descricao = descricao;
         this.status = status;
     }
 
-    public int getId() {
+    public GrupoProduto(GrupoProdutoDTO dto) {
+        this.id = dto.getId();;
+        this.descricao = dto.getDescricao();
+        this.status = Status.toEnum(dto.getStatus());
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
