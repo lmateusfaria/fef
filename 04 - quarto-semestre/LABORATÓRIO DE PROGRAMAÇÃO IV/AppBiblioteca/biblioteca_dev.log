@@ -4802,3 +4802,6 @@ List of constraint violations:[
     where
         l1_0.id_livro=?
 2024-11-10T22:14:28.522-03:00  WARN 8664 --- [App] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.biblioteca.services.exceptions.ObjectNotFoundException: Livro não encontrado! ID: 6]
+2024-11-10T22:19:05.093-03:00  INFO 8664 --- [App] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10T22:19:05.101-03:00  INFO 8664 --- [App] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-10T22:19:05.121-03:00  INFO 8664 --- [App] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
