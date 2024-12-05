@@ -1,6 +1,6 @@
-package com.biblioteca.config;
+package com.petSolidario.config;
 
-import com.biblioteca.services.DBService;
+import com.petSolidario.services.DBService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -17,5 +17,4 @@ public class DevConfig {
     public void initDB(){
         this.dbService.initDB();
     }
-
 }

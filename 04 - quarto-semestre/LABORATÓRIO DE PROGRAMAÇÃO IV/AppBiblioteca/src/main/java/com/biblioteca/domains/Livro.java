@@ -62,7 +62,6 @@ public class Livro {
         this.conservacao = Conservacao.EXCELENTE;
     }
 
-
     public Livro(Integer idLivro, String titulo, String isbn, int numeroPaginas, LocalDate dataCompra, BigDecimal valorCompra, Autor autor, Editora editora, Status status, Conservacao conservacao) {
         this.idLivro = idLivro;
         this.titulo = titulo;
@@ -172,4 +171,5 @@ public class Livro {
     public void setConservacao(Conservacao conservacao) {
         this.conservacao = conservacao;
     }
+
 }
