@@ -8,9 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 @Table(name = "usuario")
@@ -23,20 +21,25 @@ public class Usuario {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataCadastro;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     @Column(unique = true)
     private String email;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     private String senha;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     private String nome;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     private String sexo;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     @Column(unique = true)
     private String cpf;
 
@@ -56,10 +59,9 @@ public class Usuario {
     private List<Instituicao> instituicoes = new ArrayList<>();
 
     public Usuario() {
-
     }
 
-    public Usuario(Long id, LocalDate dataCadastro, String email, String senha, String nome, String sexo, String cpf, LocalDate dataNascimento, List<Instituicao> instituicoes, List<Animal> animais, List<Produto> produtos) {
+    public Usuario(Long id, LocalDate dataCadastro, String email, String senha, String nome, String sexo, String cpf, LocalDate dataNascimento, List<Animal> animais, List<Produto> produtos, List<Instituicao> instituicoes) {
         this.id = id;
         this.dataCadastro = dataCadastro;
         this.email = email;
@@ -68,10 +70,11 @@ public class Usuario {
         this.sexo = sexo;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
-        this.instituicoes = instituicoes;
         this.animais = animais;
         this.produtos = produtos;
+        this.instituicoes = instituicoes;
     }
+
 
     public Usuario(UsuarioDTO dto) {
         this.id = dto.getId();
@@ -83,6 +86,7 @@ public class Usuario {
         this.cpf = dto.getCpf();
         this.dataNascimento = dto.getDataNascimento();
     }
+
 
     public Long getId() {
         return id;

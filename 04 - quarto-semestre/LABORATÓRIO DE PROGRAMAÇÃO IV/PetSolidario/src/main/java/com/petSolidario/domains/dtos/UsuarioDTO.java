@@ -5,6 +5,7 @@ import com.petSolidario.domains.Usuario;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+import java.lang.Long;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;

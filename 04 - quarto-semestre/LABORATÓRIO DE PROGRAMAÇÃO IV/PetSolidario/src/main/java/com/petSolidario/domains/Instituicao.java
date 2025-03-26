@@ -9,9 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 
 @Entity
@@ -52,7 +50,6 @@ public class Instituicao {
     private Situacao situacao;
 
     public Instituicao() {
-
     }
 
     public Instituicao(Long id, LocalDate dataCadastro, String nome, String cnpj, String razaoSocial, List<Produto> produtos, Usuario usuario, List<Animal> animais, Situacao situacao) {

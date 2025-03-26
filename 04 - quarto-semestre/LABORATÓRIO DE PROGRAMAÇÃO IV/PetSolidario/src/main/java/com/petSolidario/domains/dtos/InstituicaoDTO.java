@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class InstituicaoDTO {
@@ -28,7 +29,7 @@ public class InstituicaoDTO {
     private String razaoSocial;
 
     @NotNull(message = "O campo Usuario é requerido!")
-    private long usuario; // IDs dos usuários
+    private Long usuario; // IDs dos usuários
     private String nomeUsuario; // nome do usuário
 
     private int situacao;
@@ -89,11 +90,11 @@ public class InstituicaoDTO {
     }
 
     @NotNull(message = "O campo Usuario é requerido!")
-    public long getUsuario() {
+    public Long getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(@NotNull(message = "O campo Usuario é requerido!") long usuario) {
+    public void setUsuario(@NotNull(message = "O campo Usuario é requerido!") Long usuario) {
         this.usuario = usuario;
     }
 
