@@ -1,4 +1,403 @@
-2025-03-26T07:09:37.686-03:00  WARN 6072 --- [PetSolidario] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h57m25s35ms948µs100ns).
-2025-03-26T08:46:35.135-03:00  INFO 6072 --- [PetSolidario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-03-26T08:46:35.165-03:00  INFO 6072 --- [PetSolidario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-03-26T08:46:35.174-03:00  INFO 6072 --- [PetSolidario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-27T21:11:14.355-03:00  INFO 15316 --- [PetSolidario] [restartedMain] c.p.P.PetSolidarioApplication            : Starting PetSolidarioApplication using Java 21.0.6 with PID 15316 (C:\Users\User\Desktop\Luis Mateus\fef\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\PetSolidario\target\classes started by User in C:\Users\User\Desktop\Luis Mateus\fef\04 - quarto-semestre\LABORATÓRIO DE PROGRAMAÇÃO IV\PetSolidario)
+2025-03-27T21:11:14.387-03:00  INFO 15316 --- [PetSolidario] [restartedMain] c.p.P.PetSolidarioApplication            : The following 1 profile is active: "dev"
+2025-03-27T21:11:14.542-03:00  INFO 15316 --- [PetSolidario] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-27T21:11:14.543-03:00  INFO 15316 --- [PetSolidario] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-27T21:11:15.774-03:00  INFO 15316 --- [PetSolidario] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-27T21:11:15.913-03:00  INFO 15316 --- [PetSolidario] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 5 JPA repository interfaces.
+2025-03-27T21:11:17.705-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-27T21:11:17.741-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-27T21:11:17.742-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-03-27T21:11:17.875-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-27T21:11:17.876-03:00  INFO 15316 --- [PetSolidario] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3332 ms
+2025-03-27T21:11:17.953-03:00  INFO 15316 --- [PetSolidario] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-27T21:11:18.260-03:00  INFO 15316 --- [PetSolidario] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@672f9b41
+2025-03-27T21:11:18.264-03:00  INFO 15316 --- [PetSolidario] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-27T21:11:18.286-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_pet_solidario'
+2025-03-27T21:11:18.629-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-27T21:11:18.821-03:00  INFO 15316 --- [PetSolidario] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-03-27T21:11:18.918-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-27T21:11:19.852-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-27T21:11:20.271-03:00  WARN 15316 --- [PetSolidario] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 9.5.25 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-03-27T21:11:23.573-03:00  INFO 15316 --- [PetSolidario] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-27T21:11:23.609-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists animal 
+       drop constraint if exists FKj5v7d442qpsnavr5gnxsrcj16
+2025-03-27T21:11:23.615-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists animal 
+       drop constraint if exists FK6y494mj4owltedjwxb1soe1we
+2025-03-27T21:11:23.617-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists instituicao 
+       drop constraint if exists FK6962neem9bi82cqnutn2wbqv0
+2025-03-27T21:11:23.619-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_animal 
+       drop constraint if exists FKlhx78ujoe2i6bxhd7d38tysi9
+2025-03-27T21:11:23.623-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_animal 
+       drop constraint if exists FKjsxpvxvuujbyl8svkkua6sgt1
+2025-03-27T21:11:23.625-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_instituicao 
+       drop constraint if exists FKp4okuh9vcwwcreh0pl3twsvxg
+2025-03-27T21:11:23.627-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_instituicao 
+       drop constraint if exists FK4lyuy0k19lxehkp483o6vb3rt
+2025-03-27T21:11:23.629-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_produto 
+       drop constraint if exists FKn19vdrjgovlkqx0avmrfcilxp
+2025-03-27T21:11:23.631-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_produto 
+       drop constraint if exists FKbnwova9lh0gomlwbdb42pjv66
+2025-03-27T21:11:23.633-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_usuario 
+       drop constraint if exists FK3kc67kmy3iej0tjb703x3mdtk
+2025-03-27T21:11:23.634-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       drop constraint if exists FKb6a63irn40iv8nrw6plp6iceq
+2025-03-27T21:11:23.638-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-03-27T21:11:23.639-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "fkb6a63irn40iv8nrw6plp6iceq" of relation "perfis" does not exist, skipping
+2025-03-27T21:11:23.639-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists person_type 
+       drop constraint if exists FKlsqa6b8ayn9ofrnhs36exva8
+2025-03-27T21:11:23.641-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists produto 
+       drop constraint if exists FKm9tm3gjdi4pm9rb9ws641lprw
+2025-03-27T21:11:23.643-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists produto 
+       drop constraint if exists FKskfpvtkp3jvc00j7xekr1kwb9
+2025-03-27T21:11:23.646-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists animal cascade
+2025-03-27T21:11:23.658-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-03-27T21:11:23.658-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : drop cascades to constraint fkfaxod5vslq7wqnkljvh8ehr4y on table adocao
+2025-03-27T21:11:23.658-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists instituicao cascade
+2025-03-27T21:11:23.677-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-03-27T21:11:23.678-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : drop cascades to constraint fk4pud50v54m525rshfncmdub6v on table adocao
+2025-03-27T21:11:23.678-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists new_animal cascade
+2025-03-27T21:11:23.690-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists new_instituicao cascade
+2025-03-27T21:11:23.701-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists new_person cascade
+2025-03-27T21:11:23.706-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists new_produto cascade
+2025-03-27T21:11:23.715-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists new_usuario cascade
+2025-03-27T21:11:23.726-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade
+2025-03-27T21:11:23.729-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists person_type cascade
+2025-03-27T21:11:23.732-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists produto cascade
+2025-03-27T21:11:23.739-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade
+2025-03-27T21:11:23.747-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-03-27T21:11:23.748-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : drop cascades to constraint fkifa6jt4hb7rqmwry90hmpg7gn on table adocao
+2025-03-27T21:11:23.748-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_animal
+2025-03-27T21:11:23.750-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_instituicao
+2025-03-27T21:11:23.753-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_person
+2025-03-27T21:11:23.756-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_produto
+2025-03-27T21:11:23.758-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_usuario
+2025-03-27T21:11:23.769-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_animal start with 1 increment by 50
+2025-03-27T21:11:23.774-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_instituicao start with 1 increment by 50
+2025-03-27T21:11:23.778-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_person start with 1 increment by 50
+2025-03-27T21:11:23.782-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_produto start with 1 increment by 50
+2025-03-27T21:11:23.790-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_usuario start with 1 increment by 50
+2025-03-27T21:11:23.810-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table animal (
+        data_cadastro date,
+        porte smallint check (porte between 0 and 2),
+        data_nascimento timestamp(6),
+        id bigint not null,
+        idinstituicao bigint,
+        idusuario bigint,
+        cor varchar(255) not null,
+        especie varchar(255) not null,
+        nome varchar(255) not null,
+        raca varchar(255) not null,
+        registro varchar(255) not null unique,
+        sexo varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:23.852-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table instituicao (
+        data_cadastro date,
+        situacao smallint check (situacao between 0 and 2),
+        id bigint not null,
+        idusuario bigint,
+        cnpj varchar(255) not null unique,
+        nome varchar(255) not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:23.879-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table new_animal (
+        data_cadastro date,
+        porte smallint check (porte between 0 and 2),
+        data_nascimento timestamp(6),
+        id bigint not null,
+        idinstituicao bigint,
+        idusuario bigint,
+        cor varchar(255) not null,
+        especie varchar(255) not null,
+        nome varchar(255) not null,
+        raca varchar(255) not null,
+        registro varchar(255) not null unique,
+        sexo varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:23.901-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table new_instituicao (
+        data_cadastro date,
+        situacao smallint check (situacao between 0 and 2),
+        id bigint not null,
+        idusuario bigint,
+        cnpj varchar(255) not null unique,
+        nome varchar(255) not null,
+        razao_social varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:23.922-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table new_person (
+        create_at date,
+        id bigint not null,
+        primary key (id)
+    )
+2025-03-27T21:11:23.929-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table new_produto (
+        data_cadastro date,
+        peso numeric(18,3) not null,
+        id bigint not null,
+        idinstituicao bigint,
+        idusuario bigint,
+        codigo_de_barras varchar(255) not null unique,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:23.957-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table new_usuario (
+        data_cadastro date,
+        data_nascimento date,
+        id bigint not null,
+        cpf varchar(255) not null unique,
+        email varchar(255) not null unique,
+        nome varchar(255) not null,
+        senha varchar(255) not null,
+        sexo varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:24.002-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        person_type integer,
+        new_animal_id bigint not null
+    )
+2025-03-27T21:11:24.005-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table person_type (
+        person_type integer,
+        person_id bigint not null
+    )
+2025-03-27T21:11:24.009-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table produto (
+        data_cadastro date,
+        peso numeric(18,3) not null,
+        id bigint not null,
+        idinstituicao bigint,
+        idusuario bigint,
+        codigo_de_barras varchar(255) not null unique,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:24.033-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    create table usuario (
+        data_cadastro date,
+        data_nascimento date,
+        id bigint not null,
+        cpf varchar(255) not null unique,
+        email varchar(255) not null unique,
+        nome varchar(255) not null,
+        senha varchar(255) not null,
+        sexo varchar(255) not null,
+        primary key (id)
+    )
+2025-03-27T21:11:24.066-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists animal 
+       add constraint FKj5v7d442qpsnavr5gnxsrcj16 
+       foreign key (idinstituicao) 
+       references instituicao
+2025-03-27T21:11:24.079-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists animal 
+       add constraint FK6y494mj4owltedjwxb1soe1we 
+       foreign key (idusuario) 
+       references usuario
+2025-03-27T21:11:24.083-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists instituicao 
+       add constraint FK6962neem9bi82cqnutn2wbqv0 
+       foreign key (idusuario) 
+       references usuario
+2025-03-27T21:11:24.087-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_animal 
+       add constraint FKlhx78ujoe2i6bxhd7d38tysi9 
+       foreign key (idinstituicao) 
+       references new_instituicao
+2025-03-27T21:11:24.094-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_animal 
+       add constraint FKjsxpvxvuujbyl8svkkua6sgt1 
+       foreign key (idusuario) 
+       references new_usuario
+2025-03-27T21:11:24.098-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_instituicao 
+       add constraint FKp4okuh9vcwwcreh0pl3twsvxg 
+       foreign key (idusuario) 
+       references new_usuario
+2025-03-27T21:11:24.102-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_instituicao 
+       add constraint FK4lyuy0k19lxehkp483o6vb3rt 
+       foreign key (id) 
+       references new_person
+2025-03-27T21:11:24.107-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_produto 
+       add constraint FKn19vdrjgovlkqx0avmrfcilxp 
+       foreign key (idinstituicao) 
+       references new_instituicao
+2025-03-27T21:11:24.112-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_produto 
+       add constraint FKbnwova9lh0gomlwbdb42pjv66 
+       foreign key (idusuario) 
+       references new_usuario
+2025-03-27T21:11:24.116-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists new_usuario 
+       add constraint FK3kc67kmy3iej0tjb703x3mdtk 
+       foreign key (id) 
+       references new_person
+2025-03-27T21:11:24.120-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKb6a63irn40iv8nrw6plp6iceq 
+       foreign key (new_animal_id) 
+       references new_animal
+2025-03-27T21:11:24.123-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists person_type 
+       add constraint FKlsqa6b8ayn9ofrnhs36exva8 
+       foreign key (person_id) 
+       references new_person
+2025-03-27T21:11:24.129-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists produto 
+       add constraint FKm9tm3gjdi4pm9rb9ws641lprw 
+       foreign key (idinstituicao) 
+       references instituicao
+2025-03-27T21:11:24.133-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists produto 
+       add constraint FKskfpvtkp3jvc00j7xekr1kwb9 
+       foreign key (idusuario) 
+       references usuario
+2025-03-27T21:11:24.142-03:00  INFO 15316 --- [PetSolidario] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-27T21:11:24.803-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_usuario')
+2025-03-27T21:11:24.877-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (cpf, data_cadastro, data_nascimento, email, nome, senha, sexo, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:24.888-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_usuario')
+2025-03-27T21:11:24.890-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (cpf, data_cadastro, data_nascimento, email, nome, senha, sexo, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:24.892-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_instituicao')
+2025-03-27T21:11:24.895-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        instituicao
+        (cnpj, data_cadastro, nome, razao_social, situacao, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:24.899-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_instituicao')
+2025-03-27T21:11:24.901-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        instituicao
+        (cnpj, data_cadastro, nome, razao_social, situacao, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:24.903-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_animal')
+2025-03-27T21:11:24.907-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        animal
+        (cor, data_cadastro, data_nascimento, especie, idinstituicao, nome, porte, raca, registro, sexo, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:24.910-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_animal')
+2025-03-27T21:11:24.913-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        animal
+        (cor, data_cadastro, data_nascimento, especie, idinstituicao, nome, porte, raca, registro, sexo, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:24.916-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_produto')
+2025-03-27T21:11:24.919-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        produto
+        (codigo_de_barras, data_cadastro, idinstituicao, nome, peso, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:24.932-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_produto')
+2025-03-27T21:11:24.934-03:00 DEBUG 15316 --- [PetSolidario] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        produto
+        (codigo_de_barras, data_cadastro, idinstituicao, nome, peso, idusuario, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2025-03-27T21:11:25.071-03:00  WARN 15316 --- [PetSolidario] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27T21:11:25.649-03:00  WARN 15316 --- [PetSolidario] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-03-27T21:11:25.682-03:00  WARN 15316 --- [PetSolidario] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-27T21:11:25.684-03:00  INFO 15316 --- [PetSolidario] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-27T21:11:25.690-03:00  INFO 15316 --- [PetSolidario] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-27T21:11:25.706-03:00  INFO 15316 --- [PetSolidario] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-27T21:11:25.757-03:00  INFO 15316 --- [PetSolidario] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-27T21:11:25.800-03:00 ERROR 15316 --- [PetSolidario] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
