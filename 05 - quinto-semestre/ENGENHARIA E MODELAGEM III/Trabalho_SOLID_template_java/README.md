@@ -98,3 +98,7 @@ A interface é feita via console (terminal) e a aplicação é dividida em três
 - **Dependency Inversion Principle (DIP):**  
   As dependências são injetadas (por exemplo, `TaskManager` e `ITaskPrinter` são passados via construtor para `ConsoleMenu`), permitindo que as classes dependam de abstrações e não de implementações concretas.
 
+DEVS:
+MATHEUS QUEIROZ
+LUIS MATEUS DOS REIS FARIA
+KAIO MONTEIRO
