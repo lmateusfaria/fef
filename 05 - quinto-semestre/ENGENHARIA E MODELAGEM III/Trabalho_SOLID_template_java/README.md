@@ -5,15 +5,12 @@ Este projeto é uma aplicação simples em Java 17 que implementa um gerenciador
 ## Sumário
 
 - [Visão Geral](#visão-geral)
-- [Estrutura de Pacotes](#estrutura-de-pacotes)
 - [Detalhamento dos Componentes](#detalhamento-dos-componentes)
   - [Domínio](#domínio)
   - [Serviço](#serviço)
   - [Apresentação](#apresentação)
   - [Classe Principal](#classe-principal)
 - [Aplicação dos Princípios SOLID](#aplicação-dos-princípios-solid)
-- [Como Executar](#como-executar)
-- [Comentários Detalhados no Código](#comentários-detalhados-no-código)
 
 ## Visão Geral
 
