@@ -1,0 +1,910 @@
+2025-04-08T20:27:18.594-03:00  INFO 952 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Starting PokemonApplication using Java 21.0.6 with PID 952 (C:\Users\User\Desktop\Pokemon\target\classes started by User in C:\Users\User\Desktop\Pokemon)
+2025-04-08T20:27:18.599-03:00  INFO 952 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : The following 1 profile is active: "dev"
+2025-04-08T20:27:18.778-03:00  INFO 952 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-08T20:27:18.778-03:00  INFO 952 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-08T20:27:20.080-03:00  INFO 952 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T20:27:20.193-03:00  INFO 952 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 1 JPA repository interface.
+2025-04-08T20:27:21.945-03:00  INFO 952 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-08T20:27:21.970-03:00  INFO 952 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-08T20:27:21.971-03:00  INFO 952 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-08T20:27:22.050-03:00  INFO 952 --- [Pokemon] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-08T20:27:22.051-03:00  INFO 952 --- [Pokemon] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3272 ms
+2025-04-08T20:27:22.351-03:00  INFO 952 --- [Pokemon] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T20:27:22.458-03:00  INFO 952 --- [Pokemon] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-08T20:27:22.516-03:00  INFO 952 --- [Pokemon] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T20:27:23.094-03:00  INFO 952 --- [Pokemon] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T20:27:23.157-03:00  INFO 952 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-08T20:27:24.349-03:00  WARN 952 --- [Pokemon] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 3D000
+2025-04-08T20:27:24.350-03:00 ERROR 952 --- [Pokemon] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : FATAL: database "bdaplcurso" does not exist
+2025-04-08T20:27:24.352-03:00  WARN 952 --- [Pokemon] [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [FATAL: database "bdaplcurso" does not exist] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at br.com.fef.pokemon.Pokemon.PokemonApplication.main(PokemonApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+Caused by: org.postgresql.util.PSQLException: FATAL: database "bdaplcurso" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2845) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:176) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:323) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.5.jar:42.7.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	... 38 common frames omitted
+
+2025-04-08T20:27:24.363-03:00 ERROR 952 --- [Pokemon] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-04-08T20:27:24.365-03:00  WARN 952 --- [Pokemon] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-04-08T20:27:24.373-03:00  INFO 952 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-08T20:27:24.408-03:00  INFO 952 --- [Pokemon] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-08T20:27:24.443-03:00 ERROR 952 --- [Pokemon] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at br.com.fef.pokemon.Pokemon.PokemonApplication.main(PokemonApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	... 33 common frames omitted
+
+2025-04-08T20:27:59.803-03:00  INFO 2896 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Starting PokemonApplication using Java 21.0.6 with PID 2896 (C:\Users\User\Desktop\Pokemon\target\classes started by User in C:\Users\User\Desktop\Pokemon)
+2025-04-08T20:27:59.809-03:00  INFO 2896 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : The following 1 profile is active: "dev"
+2025-04-08T20:28:00.034-03:00  INFO 2896 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-08T20:28:00.035-03:00  INFO 2896 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-08T20:28:01.338-03:00  INFO 2896 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T20:28:01.478-03:00  INFO 2896 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2025-04-08T20:28:03.045-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-08T20:28:03.067-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-08T20:28:03.067-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-08T20:28:03.147-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-08T20:28:03.147-03:00  INFO 2896 --- [Pokemon] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3111 ms
+2025-04-08T20:28:03.402-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T20:28:03.492-03:00  INFO 2896 --- [Pokemon] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-08T20:28:03.542-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T20:28:04.164-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T20:28:04.219-03:00  INFO 2896 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-08T20:28:05.442-03:00  WARN 2896 --- [Pokemon] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 3D000
+2025-04-08T20:28:05.446-03:00 ERROR 2896 --- [Pokemon] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : FATAL: database "bdaplcurso" does not exist
+2025-04-08T20:28:05.453-03:00  WARN 2896 --- [Pokemon] [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [FATAL: database "bdaplcurso" does not exist] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at br.com.fef.pokemon.Pokemon.PokemonApplication.main(PokemonApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+Caused by: org.postgresql.util.PSQLException: FATAL: database "bdaplcurso" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2845) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:176) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:323) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.5.jar:42.7.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	... 38 common frames omitted
+
+2025-04-08T20:28:05.476-03:00 ERROR 2896 --- [Pokemon] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-04-08T20:28:05.478-03:00  WARN 2896 --- [Pokemon] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-04-08T20:28:05.489-03:00  INFO 2896 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-08T20:28:05.511-03:00  INFO 2896 --- [Pokemon] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-08T20:28:05.565-03:00 ERROR 2896 --- [Pokemon] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at br.com.fef.pokemon.Pokemon.PokemonApplication.main(PokemonApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
+	... 33 common frames omitted
+
+2025-04-08T20:47:41.590-03:00  INFO 3496 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Starting PokemonApplication using Java 21.0.6 with PID 3496 (C:\Users\User\Desktop\Pokemon\target\classes started by User in C:\Users\User\Desktop\Pokemon)
+2025-04-08T20:47:41.591-03:00  INFO 3496 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : The following 1 profile is active: "dev"
+2025-04-08T20:47:42.166-03:00  INFO 3496 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T20:47:42.197-03:00  INFO 3496 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2025-04-08T20:47:42.582-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-08T20:47:42.584-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-08T20:47:42.584-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-08T20:47:42.633-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-08T20:47:42.634-03:00  INFO 3496 --- [Pokemon] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
+2025-04-08T20:47:42.725-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T20:47:42.735-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T20:47:42.768-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T20:47:42.771-03:00  INFO 3496 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-04-08T20:47:43.307-03:00  INFO 3496 --- [Pokemon] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@51ab35c5
+2025-04-08T20:47:43.308-03:00  INFO 3496 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-04-08T20:47:43.347-03:00  WARN 3496 --- [Pokemon] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 9.5.25 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-08T20:47:43.362-03:00  INFO 3496 --- [Pokemon] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 9.5.25
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-08T20:47:43.667-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-08T20:47:43.667-03:00 DEBUG 3496 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-04-08T20:47:43.668-03:00 DEBUG 3496 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pokemon cascade
+2025-04-08T20:47:43.671-03:00 DEBUG 3496 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pokemon
+2025-04-08T20:47:43.672-03:00 DEBUG 3496 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pokemon start with 1 increment by 50
+2025-04-08T20:47:43.687-03:00 DEBUG 3496 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create table pokemon (
+        ataque integer not null,
+        data_captura date,
+        defesa integer not null,
+        nivel_pokemon smallint check (nivel_pokemon between 0 and 3),
+        pontos_de_vida integer not null,
+        tipo_pokemon smallint check (tipo_pokemon between 0 and 16),
+        velocidade integer not null,
+        id bigint not null,
+        cpf_pokemon varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2025-04-08T20:47:43.723-03:00  INFO 3496 --- [Pokemon] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T20:47:43.860-03:00 DEBUG 3496 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pokemon')
+2025-04-08T20:47:43.872-03:00 DEBUG 3496 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pokemon
+        (ataque, cpf_pokemon, data_captura, defesa, nivel_pokemon, nome, pontos_de_vida, tipo_pokemon, velocidade, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-04-08T20:47:43.945-03:00  WARN 3496 --- [Pokemon] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-08T20:47:44.189-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bdaplcurso'
+2025-04-08T20:47:44.252-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-08T20:47:44.280-03:00  INFO 3496 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-08T20:47:44.287-03:00  INFO 3496 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Started PokemonApplication in 2.81 seconds (process running for 44.036)
+2025-04-08T20:47:44.296-03:00  INFO 3496 --- [Pokemon] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-04-08T20:47:45.020-03:00  INFO 3496 --- [Pokemon] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-08T20:47:45.022-03:00  INFO 3496 --- [Pokemon] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-08T20:47:45.028-03:00  INFO 3496 --- [Pokemon] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-04-08T20:47:45.415-03:00 DEBUG 3496 --- [Pokemon] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0
+2025-04-08T20:47:48.538-03:00 DEBUG 3496 --- [Pokemon] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.id=?
+2025-04-08T20:47:50.992-03:00 DEBUG 3496 --- [Pokemon] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.cpf_pokemon=?
+2025-04-08T20:48:02.920-03:00 DEBUG 3496 --- [Pokemon] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.id=?
+2025-04-08T20:48:02.936-03:00 DEBUG 3496 --- [Pokemon] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    delete 
+    from
+        pokemon 
+    where
+        id=?
+2025-04-08T20:48:07.981-03:00 DEBUG 3496 --- [Pokemon] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0
+2025-04-08T20:48:14.180-03:00  INFO 3496 --- [Pokemon] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-08T20:48:14.189-03:00  INFO 3496 --- [Pokemon] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-08T20:48:14.194-03:00  INFO 3496 --- [Pokemon] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T20:48:14.196-03:00  INFO 3496 --- [Pokemon] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-04-08T20:48:14.209-03:00  INFO 3496 --- [Pokemon] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-04-08T20:48:19.898-03:00  INFO 4848 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Starting PokemonApplication using Java 21.0.6 with PID 4848 (C:\Users\User\Desktop\Pokemon\target\classes started by User in C:\Users\User\Desktop\Pokemon)
+2025-04-08T20:48:19.902-03:00  INFO 4848 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : The following 1 profile is active: "dev"
+2025-04-08T20:48:20.063-03:00  INFO 4848 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-08T20:48:20.064-03:00  INFO 4848 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-08T20:48:21.149-03:00  INFO 4848 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T20:48:21.235-03:00  INFO 4848 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interface.
+2025-04-08T20:48:22.436-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-08T20:48:22.457-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-08T20:48:22.458-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-08T20:48:22.527-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-08T20:48:22.527-03:00  INFO 4848 --- [Pokemon] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2461 ms
+2025-04-08T20:48:22.756-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T20:48:22.851-03:00  INFO 4848 --- [Pokemon] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-08T20:48:22.901-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T20:48:23.318-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T20:48:23.364-03:00  INFO 4848 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-08T20:48:23.566-03:00  INFO 4848 --- [Pokemon] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75d36436
+2025-04-08T20:48:23.568-03:00  INFO 4848 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-08T20:48:23.627-03:00  WARN 4848 --- [Pokemon] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 9.5.25 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-08T20:48:23.659-03:00  INFO 4848 --- [Pokemon] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.5.25
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-08T20:48:25.600-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-08T20:48:25.639-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-04-08T20:48:25.641-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pokemon cascade
+2025-04-08T20:48:25.656-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pokemon
+2025-04-08T20:48:25.668-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pokemon start with 1 increment by 50
+2025-04-08T20:48:25.686-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create table pokemon (
+        ataque integer not null,
+        data_captura date,
+        defesa integer not null,
+        nivel_pokemon smallint check (nivel_pokemon between 0 and 3),
+        pontos_de_vida integer not null,
+        tipo_pokemon smallint check (tipo_pokemon between 0 and 16),
+        velocidade integer not null,
+        id bigint not null,
+        cpf_pokemon varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2025-04-08T20:48:25.714-03:00  INFO 4848 --- [Pokemon] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T20:48:26.379-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pokemon')
+2025-04-08T20:48:26.483-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pokemon
+        (ataque, cpf_pokemon, data_captura, defesa, nivel_pokemon, nome, pontos_de_vida, tipo_pokemon, velocidade, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-04-08T20:48:26.728-03:00  WARN 4848 --- [Pokemon] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-08T20:48:27.474-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bdaplcurso'
+2025-04-08T20:48:27.626-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-08T20:48:27.742-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-08T20:48:27.768-03:00  INFO 4848 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Started PokemonApplication in 8.785 seconds (process running for 10.49)
+2025-04-08T20:48:59.003-03:00  INFO 4848 --- [Pokemon] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-08T20:48:59.015-03:00  INFO 4848 --- [Pokemon] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-08T20:48:59.025-03:00  INFO 4848 --- [Pokemon] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T20:48:59.032-03:00  INFO 4848 --- [Pokemon] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-08T20:48:59.044-03:00  INFO 4848 --- [Pokemon] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-08T20:51:05.610-03:00  INFO 14668 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Starting PokemonApplication using Java 21.0.6 with PID 14668 (C:\Users\User\Desktop\Pokemon\target\classes started by User in C:\Users\User\Desktop\Pokemon)
+2025-04-08T20:51:05.616-03:00  INFO 14668 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : The following 1 profile is active: "dev"
+2025-04-08T20:51:05.892-03:00  INFO 14668 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-08T20:51:05.892-03:00  INFO 14668 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-08T20:51:07.203-03:00  INFO 14668 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T20:51:07.305-03:00  INFO 14668 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interface.
+2025-04-08T20:51:08.825-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-08T20:51:08.848-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-08T20:51:08.850-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-08T20:51:08.929-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-08T20:51:08.929-03:00  INFO 14668 --- [Pokemon] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3030 ms
+2025-04-08T20:51:09.262-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T20:51:09.366-03:00  INFO 14668 --- [Pokemon] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-08T20:51:09.445-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T20:51:09.990-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T20:51:10.055-03:00  INFO 14668 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-08T20:51:10.332-03:00  INFO 14668 --- [Pokemon] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c0f201
+2025-04-08T20:51:10.337-03:00  INFO 14668 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-08T20:51:10.413-03:00  WARN 14668 --- [Pokemon] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 9.5.25 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-08T20:51:10.456-03:00  INFO 14668 --- [Pokemon] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.5.25
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-08T20:51:12.511-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-08T20:51:12.551-03:00 DEBUG 14668 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-04-08T20:51:12.553-03:00 DEBUG 14668 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pokemon cascade
+2025-04-08T20:51:12.566-03:00 DEBUG 14668 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pokemon
+2025-04-08T20:51:12.580-03:00 DEBUG 14668 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pokemon start with 1 increment by 50
+2025-04-08T20:51:12.595-03:00 DEBUG 14668 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create table pokemon (
+        ataque integer not null,
+        data_captura date,
+        defesa integer not null,
+        nivel_pokemon smallint check (nivel_pokemon between 0 and 3),
+        pontos_de_vida integer not null,
+        tipo_pokemon smallint check (tipo_pokemon between 0 and 16),
+        velocidade integer not null,
+        id bigint not null,
+        cpf_pokemon varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2025-04-08T20:51:12.627-03:00  INFO 14668 --- [Pokemon] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T20:51:13.369-03:00 DEBUG 14668 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pokemon')
+2025-04-08T20:51:13.497-03:00 DEBUG 14668 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pokemon
+        (ataque, cpf_pokemon, data_captura, defesa, nivel_pokemon, nome, pontos_de_vida, tipo_pokemon, velocidade, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-04-08T20:51:13.738-03:00  WARN 14668 --- [Pokemon] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-08T20:51:14.311-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bdaplcurso'
+2025-04-08T20:51:14.493-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-08T20:51:14.580-03:00  INFO 14668 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-08T20:51:14.592-03:00  INFO 14668 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Started PokemonApplication in 10.14 seconds (process running for 14.311)
+2025-04-08T20:51:31.545-03:00  INFO 14668 --- [Pokemon] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-08T20:51:31.545-03:00  INFO 14668 --- [Pokemon] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-08T20:51:31.551-03:00  INFO 14668 --- [Pokemon] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-04-08T20:51:32.040-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0
+2025-04-08T20:52:01.720-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0
+2025-04-08T20:52:16.404-03:00  WARN 14668 --- [Pokemon] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `br.com.fef.pokemon.domains.dtos.PokemonDTO` from Array value (token `JsonToken.START_ARRAY`)]
+2025-04-08T20:53:07.111-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0
+2025-04-08T20:53:18.582-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.id=?
+2025-04-08T20:53:25.509-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.id=?
+2025-04-08T20:53:31.091-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.cpf_pokemon=?
+2025-04-08T20:53:37.793-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.id=?
+2025-04-08T20:53:37.850-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    delete 
+    from
+        pokemon 
+    where
+        id=?
+2025-04-08T20:53:47.765-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0
+2025-04-08T20:55:11.235-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.cpf_pokemon=?
+2025-04-08T20:55:11.242-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pokemon')
+2025-04-08T20:55:11.249-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        pokemon
+        (ataque, cpf_pokemon, data_captura, defesa, nivel_pokemon, nome, pontos_de_vida, tipo_pokemon, velocidade, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-04-08T20:55:17.728-03:00 DEBUG 14668 --- [Pokemon] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0
+2025-04-08T20:56:21.254-03:00  WARN 14668 --- [Pokemon] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-04-08T20:56:43.592-03:00  WARN 14668 --- [Pokemon] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-04-08T20:57:57.552-03:00  INFO 14668 --- [Pokemon] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-08T20:57:57.563-03:00  INFO 14668 --- [Pokemon] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-08T20:57:57.588-03:00  INFO 14668 --- [Pokemon] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T20:58:10.339-03:00  INFO 4848 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Starting PokemonApplication using Java 21.0.6 with PID 4848 (C:\Users\User\Desktop\Pokemon\target\classes started by User in C:\Users\User\Desktop\Pokemon)
+2025-04-08T20:58:10.347-03:00  INFO 4848 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : The following 1 profile is active: "dev"
+2025-04-08T20:58:10.693-03:00  INFO 4848 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-08T20:58:10.694-03:00  INFO 4848 --- [Pokemon] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-08T20:58:12.681-03:00  INFO 4848 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T20:58:12.865-03:00  INFO 4848 --- [Pokemon] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 JPA repository interface.
+2025-04-08T20:58:15.719-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-08T20:58:15.770-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-08T20:58:15.803-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-08T20:58:16.112-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-08T20:58:16.113-03:00  INFO 4848 --- [Pokemon] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5417 ms
+2025-04-08T20:58:16.643-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T20:58:16.835-03:00  INFO 4848 --- [Pokemon] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-08T20:58:16.967-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T20:58:18.187-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T20:58:18.286-03:00  INFO 4848 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-08T20:58:18.761-03:00  INFO 4848 --- [Pokemon] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f101af4
+2025-04-08T20:58:18.766-03:00  INFO 4848 --- [Pokemon] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-08T20:58:18.920-03:00  WARN 4848 --- [Pokemon] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 9.5.25 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-08T20:58:19.013-03:00  INFO 4848 --- [Pokemon] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.5.25
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-08T20:58:22.113-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-08T20:58:22.174-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-04-08T20:58:22.177-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pokemon cascade
+2025-04-08T20:58:22.195-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pokemon
+2025-04-08T20:58:22.215-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pokemon start with 1 increment by 50
+2025-04-08T20:58:22.235-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    create table pokemon (
+        ataque integer not null,
+        data_captura date,
+        defesa integer not null,
+        nivel_pokemon smallint check (nivel_pokemon between 0 and 3),
+        pontos_de_vida integer not null,
+        tipo_pokemon smallint check (tipo_pokemon between 0 and 16),
+        velocidade integer not null,
+        id bigint not null,
+        cpf_pokemon varchar(255) not null,
+        nome varchar(255) not null,
+        primary key (id)
+    )
+2025-04-08T20:58:22.272-03:00  INFO 4848 --- [Pokemon] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T20:58:23.529-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pokemon')
+2025-04-08T20:58:23.715-03:00 DEBUG 4848 --- [Pokemon] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pokemon
+        (ataque, cpf_pokemon, data_captura, defesa, nivel_pokemon, nome, pontos_de_vida, tipo_pokemon, velocidade, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-04-08T20:58:23.949-03:00  WARN 4848 --- [Pokemon] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-08T20:58:25.206-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bdaplcurso'
+2025-04-08T20:58:25.451-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-08T20:58:25.627-03:00  INFO 4848 --- [Pokemon] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-08T20:58:25.650-03:00  INFO 4848 --- [Pokemon] [restartedMain] b.c.f.p.Pokemon.PokemonApplication       : Started PokemonApplication in 17.175 seconds (process running for 19.662)
+2025-04-08T20:58:28.819-03:00  INFO 4848 --- [Pokemon] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-08T20:58:28.821-03:00  INFO 4848 --- [Pokemon] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-08T20:58:28.822-03:00  INFO 4848 --- [Pokemon] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-08T20:58:29.610-03:00 DEBUG 4848 --- [Pokemon] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.cpf_pokemon=?
+2025-04-08T20:58:29.675-03:00 DEBUG 4848 --- [Pokemon] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pokemon')
+2025-04-08T20:58:29.682-03:00 DEBUG 4848 --- [Pokemon] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        pokemon
+        (ataque, cpf_pokemon, data_captura, defesa, nivel_pokemon, nome, pontos_de_vida, tipo_pokemon, velocidade, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-04-08T20:58:44.383-03:00  WARN 4848 --- [Pokemon] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<br.com.fef.pokemon.domains.dtos.PokemonDTO> br.com.fef.pokemon.resources.PokemonResource.update(java.lang.Long,br.com.fef.pokemon.domains.dtos.PokemonDTO): [Field error in object 'pokemonDTO' on field 'cpfPokemon': rejected value [11111111111]; codes [CPF.pokemonDTO.cpfPokemon,CPF.cpfPokemon,CPF.java.lang.String,CPF]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pokemonDTO.cpfPokemon,cpfPokemon]; arguments []; default message [cpfPokemon]]; default message [número do registro de contribuinte individual brasileiro (CPF) inválido]] ]
+2025-04-08T20:59:19.607-03:00  WARN 4848 --- [Pokemon] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<br.com.fef.pokemon.domains.dtos.PokemonDTO> br.com.fef.pokemon.resources.PokemonResource.update(java.lang.Long,br.com.fef.pokemon.domains.dtos.PokemonDTO): [Field error in object 'pokemonDTO' on field 'cpfPokemon': rejected value [12345678910]; codes [CPF.pokemonDTO.cpfPokemon,CPF.cpfPokemon,CPF.java.lang.String,CPF]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pokemonDTO.cpfPokemon,cpfPokemon]; arguments []; default message [cpfPokemon]]; default message [número do registro de contribuinte individual brasileiro (CPF) inválido]] ]
+2025-04-08T20:59:46.150-03:00  WARN 4848 --- [Pokemon] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<br.com.fef.pokemon.domains.dtos.PokemonDTO> br.com.fef.pokemon.resources.PokemonResource.update(java.lang.Long,br.com.fef.pokemon.domains.dtos.PokemonDTO): [Field error in object 'pokemonDTO' on field 'cpfPokemon': rejected value [123.456.789-10]; codes [CPF.pokemonDTO.cpfPokemon,CPF.cpfPokemon,CPF.java.lang.String,CPF]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pokemonDTO.cpfPokemon,cpfPokemon]; arguments []; default message [cpfPokemon]]; default message [número do registro de contribuinte individual brasileiro (CPF) inválido]] ]
+2025-04-08T21:01:20.362-03:00  WARN 4848 --- [Pokemon] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<br.com.fef.pokemon.domains.dtos.PokemonDTO> br.com.fef.pokemon.resources.PokemonResource.update(java.lang.Long,br.com.fef.pokemon.domains.dtos.PokemonDTO): [Field error in object 'pokemonDTO' on field 'cpfPokemon': rejected value [123.456.789-10]; codes [CPF.pokemonDTO.cpfPokemon,CPF.cpfPokemon,CPF.java.lang.String,CPF]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pokemonDTO.cpfPokemon,cpfPokemon]; arguments []; default message [cpfPokemon]]; default message [número do registro de contribuinte individual brasileiro (CPF) inválido]] ]
+2025-04-08T21:02:07.201-03:00 DEBUG 4848 --- [Pokemon] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.cpf_pokemon=?
+2025-04-08T21:02:07.251-03:00 DEBUG 4848 --- [Pokemon] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.id=?
+2025-04-08T21:02:07.274-03:00 DEBUG 4848 --- [Pokemon] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        pokemon 
+    set
+        ataque=?,
+        cpf_pokemon=?,
+        data_captura=?,
+        defesa=?,
+        nivel_pokemon=?,
+        nome=?,
+        pontos_de_vida=?,
+        tipo_pokemon=?,
+        velocidade=? 
+    where
+        id=?
+2025-04-08T21:02:20.861-03:00 DEBUG 4848 --- [Pokemon] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.ataque,
+        p1_0.cpf_pokemon,
+        p1_0.data_captura,
+        p1_0.defesa,
+        p1_0.nivel_pokemon,
+        p1_0.nome,
+        p1_0.pontos_de_vida,
+        p1_0.tipo_pokemon,
+        p1_0.velocidade 
+    from
+        pokemon p1_0 
+    where
+        p1_0.id=?
