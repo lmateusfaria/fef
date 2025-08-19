@@ -3,12 +3,14 @@ package com.petSolidario.domains;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.petSolidario.domains.dtos.UsuarioDTO;
+import com.petSolidario.domains.enums.PersonType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "usuario")
@@ -46,6 +48,11 @@ public class Usuario {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
 
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "perfis", joinColumns = @JoinColumn(name = "person_id"))
+    @Column(name = "person_type")
+    protected Set<Integer> personType = new HashSet<>();
+
     @JsonIgnore
     @OneToMany(mappedBy = "usuario")
     private List<Animal> animais = new ArrayList<>();
@@ -59,6 +66,7 @@ public class Usuario {
     private List<Instituicao> instituicoes = new ArrayList<>();
 
     public Usuario() {
+        addPersonType(PersonType.USER);
     }
 
     public Usuario(Long id, LocalDate dataCadastro, String email, String senha, String nome, String sexo, String cpf, LocalDate dataNascimento, List<Animal> animais, List<Produto> produtos, List<Instituicao> instituicoes) {
@@ -73,6 +81,7 @@ public class Usuario {
         this.animais = animais;
         this.produtos = produtos;
         this.instituicoes = instituicoes;
+        addPersonType(PersonType.USER);
     }
 
 
@@ -85,6 +94,7 @@ public class Usuario {
         this.sexo = dto.getSexo();
         this.cpf = dto.getCpf();
         this.dataNascimento = dto.getDataNascimento();
+        addPersonType(PersonType.USER);
     }
 
 
@@ -174,6 +184,14 @@ public class Usuario {
 
     public void setInstituicoes(List<Instituicao> instituicoes) {
         this.instituicoes = instituicoes;
+    }
+
+    public Set<PersonType> getPersonType() {
+        return personType.stream().map(PersonType::toEnum).collect(Collectors.toSet());
+    }
+
+    public void addPersonType(PersonType personType) {
+        this.personType.add(personType.getId());
     }
 
     @Override

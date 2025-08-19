@@ -1,7 +1,9 @@
-package com.curso.domains.enums;
+package com.petSolidario.domains.enums;
 
 public enum PersonType {
-    ADMIN(0,"ROLE_ADMINS)"),USER(1,"ROLE_USER"),TECHNICIAN(2,"ROLE_TECHNICIAN");
+
+    ADMIN(0, "ROLE_ADMINS"), USER(1,"ROLE_USER"),
+    TECHNICIAN(2, "ROLE_TECHNICIAN");
 
     private Integer id;
     private String personType;
@@ -28,13 +30,12 @@ public enum PersonType {
     }
 
     public static PersonType toEnum(Integer id) {
-        if (id == null) return null;
-        for (PersonType x : PersonType.values()) {
-            if (id.equals(x.getId())) {
+        if(id==null) return null;
+        for(PersonType x : PersonType.values()){
+            if(id.equals(x.getId())){
                 return x;
             }
         }
-        throw new IllegalArgumentException("Perfil inválido!");
+        throw new IllegalArgumentException("Perfil inválido");
     }
-
 }

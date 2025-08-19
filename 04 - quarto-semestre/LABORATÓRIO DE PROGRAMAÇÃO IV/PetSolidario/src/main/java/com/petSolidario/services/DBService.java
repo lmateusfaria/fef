@@ -11,6 +11,7 @@ import com.petSolidario.repositories.InstituicaoRepository;
 import com.petSolidario.repositories.ProdutoRepository;
 import com.petSolidario.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -33,9 +34,12 @@ public class DBService {
     @Autowired
     private ProdutoRepository produtoRepo;
 
+    @Autowired
+    private PasswordEncoder encoder;
+
     public void initDB(){
-        Usuario usuario1 = new Usuario(null, LocalDate.now(),"usuario1@gmail.com","senhauser1","usuario1","Masculino","111", LocalDate.of(2000,11,25),null,null,null);
-        Usuario usuario2 = new Usuario(null, LocalDate.now(),"usuario2@gmail.com","senhauser2","usuario2","Feminino","333", LocalDate.of(2004,5,1),null,null,null);
+        Usuario usuario1 = new Usuario(null, LocalDate.now(),"usuario1@gmail.com",encoder.encode("senhauser1"),"usuario1","Masculino","111", LocalDate.of(2000,11,25),null,null,null);
+        Usuario usuario2 = new Usuario(null, LocalDate.now(),"usuario2@gmail.com",encoder.encode("senhauser2"),"usuario2","Feminino","333", LocalDate.of(2004,5,1),null,null,null);
 
         usuarioRepo.save(usuario1);
         usuarioRepo.save(usuario2);

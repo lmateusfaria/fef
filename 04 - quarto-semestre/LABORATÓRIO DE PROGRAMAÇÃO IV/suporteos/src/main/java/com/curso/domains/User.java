@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Entity
 @Table(name = "users")
 @PrimaryKeyJoinColumn(name = "person_id")  // Chave estrangeira para a tabela "persons"
-
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User extends Person{
 
     @JsonIgnore

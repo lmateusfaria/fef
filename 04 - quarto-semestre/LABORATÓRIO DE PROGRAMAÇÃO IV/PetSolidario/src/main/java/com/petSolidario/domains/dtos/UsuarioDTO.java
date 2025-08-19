@@ -7,7 +7,9 @@ import jakarta.validation.constraints.NotNull;
 
 import java.lang.Long;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class UsuarioDTO {
@@ -38,6 +40,9 @@ public class UsuarioDTO {
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento ;
+
+    protected Set<Integer> personType = new HashSet<>();
+
 
     private List<Long> instituicoes ;
 
@@ -157,5 +162,13 @@ public class UsuarioDTO {
 
     public void setProdutos(List<Long> produtos) {
         this.produtos = produtos;
+    }
+
+    public Set<Integer> getPersonType() {
+        return personType;
+    }
+
+    public void setPersonType(Set<Integer> personType) {
+        this.personType = personType;
     }
 }

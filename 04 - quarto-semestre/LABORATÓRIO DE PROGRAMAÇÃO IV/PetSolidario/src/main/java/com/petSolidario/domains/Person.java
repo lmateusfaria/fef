@@ -1,7 +1,7 @@
-package com.curso.domains;
+package com.petSolidario.domains;
 
-import com.curso.domains.enums.PersonType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.petSolidario.domains.enums.PersonType;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,7 +17,9 @@ public abstract class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_person")
+    @SequenceGenerator(name = "seq_person", sequenceName = "seq_person", allocationSize = 1)
     protected Long id;
+
     protected String firstName;
     protected String lastName;
 
@@ -29,17 +31,19 @@ public abstract class Person {
     protected String password;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
-    protected LocalDate createAt = LocalDate.now();
+    protected LocalDate createdAt = LocalDate.now();
 
     @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "perfis") 
+    @CollectionTable(name = "perfis", joinColumns = @JoinColumn(name = "person_id"))
+    @Column(name = "person_type")
     protected Set<Integer> personType = new HashSet<>();
 
     public Person() {
         addPersonType(PersonType.USER);
     }
 
-    public Person(Long id, String firstName, String lastName, String cpf, String email, String password) {
+    public Person(Long id, String firstName, String lastName, String cpf, String email,
+                  String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -97,12 +101,12 @@ public abstract class Person {
         this.password = password;
     }
 
-    public LocalDate getCreateAt() {
-        return createAt;
+    public LocalDate getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreateAt(LocalDate createAt) {
-        this.createAt = createAt;
+    public void setCreatedAt(LocalDate createdAt) {
+        this.createdAt = createdAt;
     }
 
     public Set<PersonType> getPersonType() {
