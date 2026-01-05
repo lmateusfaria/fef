@@ -1,1 +1,5 @@
 *.rar
+# Ignore log and compressed log files
+*.log
+*.gz
+
