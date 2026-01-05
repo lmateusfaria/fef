@@ -57,7 +57,6 @@ public class Usuario extends Person {
         addPersonType(PersonType.USER);
     }
 
-
     public Usuario(UsuarioDTO dto) {
         this.id = dto.getId();
         this.nome = dto.getNome();
